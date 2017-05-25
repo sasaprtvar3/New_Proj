@@ -12,7 +12,7 @@ import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
 import s from './styles.css';
 import { title, html } from './index.md';
-
+import date from '../date';
 class HomePage extends React.Component {
 
   static propTypes = {
@@ -28,13 +28,16 @@ class HomePage extends React.Component {
   }
 
   render() {
+    let d = new date();
+    console.log(d);
     return (
       <Layout className={s.content}>
         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: html }}
-        />
+        /> Sasa is the greatest!
         <h4>Articles</h4>
+        {d.render()}
         <ul>
           {this.props.articles.map(article =>
             <li key={article.url}>
