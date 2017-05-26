@@ -35,7 +35,7 @@ class HomePage extends React.Component {
         <div
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: html }}
-        /> Sasa is the greatest!
+        /> Sasa is the GOAT!
         <h4>Articles</h4>
         {d.render()}
         <ul>
